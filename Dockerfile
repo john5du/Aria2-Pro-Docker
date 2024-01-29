@@ -14,7 +14,7 @@
 FROM p3terx/s6-alpine
 
 RUN apk add --no-cache jq findutils && \
-    curl -fsSL https://raw.githubusercontent.com/P3TERX/aria2-builder/master/aria2-install.sh | bash && \
+    curl -fsSL https://raw.githubusercontent.com/DDS-Derek/Aria2-Pro-Core/master/aria2-install.sh | bash && \
     rm -rf /var/cache/apk/* /tmp/*
 
 COPY rootfs /
