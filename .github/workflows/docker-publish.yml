@@ -32,11 +32,11 @@ jobs:
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v1
 
-    - name: Login to DockerHub
-      uses: docker/login-action@v1
-      with:
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
+    # - name: Login to DockerHub
+    #   uses: docker/login-action@v1
+    #   with:
+    #     username: ${{ secrets.DOCKER_USERNAME }}
+    #     password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Login to GitHub Container Registry
       uses: docker/login-action@v1
@@ -61,7 +61,7 @@ jobs:
         context: .
         push: true
         tags: |
-          p3terx/aria2-pro
-          ghcr.io/p3terx/aria2-pro
-          p3terx/aria2-pro:${{ steps.getVersion.outputs.time }}
-          ghcr.io/p3terx/aria2-pro:${{ steps.getVersion.outputs.time }}
+          # p3terx/aria2-pro
+          ghcr.io/john5du/aria2-pro
+          # p3terx/aria2-pro:${{ steps.getVersion.outputs.time }}
+          ghcr.io/john5du/aria2-pro:${{ steps.getVersion.outputs.time }}
